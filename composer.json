@@ -1,0 +1,16 @@
+{
+    "name": "yassi/wp-composer-plugin",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yassine",
+            "email": "yassine.abouzia@gmail.com"
+        }
+    ],
+    "require": {}
+}
