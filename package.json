@@ -1,0 +1,19 @@
+{
+  "name": "wp-composer-plugin",
+  "version": "1.0.0",
+  "description": "\"# wordpress-plugin-composer-boilerplate\"",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "cssnano": "^6.0.3",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.1.0",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.33"
+  },
+  "devDependencies": {
+    "sass": "^1.69.7"
+  }
+}

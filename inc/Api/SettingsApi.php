@@ -136,7 +136,7 @@ class SettingsApi
                 $section['page']
             );
         }
-
+        
         // add settings field
         foreach ($this->fields as $field) {
             add_settings_field(
