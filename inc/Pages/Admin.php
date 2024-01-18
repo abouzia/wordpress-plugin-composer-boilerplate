@@ -69,15 +69,21 @@ class Admin extends BaseController
 
     public function setSettings()
     {
-        $args = array();
-
-        foreach ($this->managers as $key => $value) {
-            $args[] = array(
+        $args = array(
+            array(
                 'option_group' => 'wp_composer_plugin_settings',
-                'option_name' => $key,
+                'option_name' => 'wp_composer_plugin',
                 'callback' => array($this->callbacks_mngr, 'checkboxSanitize'),
-            );
-        }
+            )
+        );
+
+        // foreach ($this->managers as $key => $value) {
+        //     $args[] = array(
+        //         'option_group' => 'wp_composer_plugin_settings',
+        //         'option_name' => $key,
+        //         'callback' => array($this->callbacks_mngr, 'checkboxSanitize'),
+        //     );
+        // }
 
         $this->settings->setSettings($args);
     }
@@ -109,6 +115,7 @@ class Admin extends BaseController
                 'page' => 'wp_composer',
                 'section' => 'wp_composer_admin_index',
                 'args' => array(
+                    'option_name' => 'wp_composer_plugin',
                     'label_for' => $key,
                     'class' => 'ui-toggle',
                 )
