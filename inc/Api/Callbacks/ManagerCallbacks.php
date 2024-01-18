@@ -28,15 +28,18 @@ class ManagerCallbacks extends BaseController
 
     public function checkboxField($args)
     {
-
         $name = $args['label_for'];
         $classes = $args['class'];
         $option_name = $args['option_name'];
 
         $checkboxes = get_option($option_name);
+        $checkbox = isset($checkboxes[$name]) ? $checkboxes[$name] : false;
+        $checked = $checkbox ? 'checked' : '';
 
         echo '<div class="' . $classes . '">
-        <input type="checkbox" id="' . $name . '" name="' . $option_name . '[' . $name . ']' .  '" value="1" class="" ' . ($checkboxes[$name] ? 'checked' : '') . '>
+        <input type="checkbox" id="' . $name . '"
+        name="' . $option_name . '[' . $name . ']' .  '" value="1"
+        class="" ' . $checked . '>
         <label for="' . $name . '">
         <div></div>
         </label>
